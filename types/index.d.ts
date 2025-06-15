@@ -5,8 +5,8 @@ declare type SearchParamProps = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-declare type Gender = "male" | "female" | "other";
-declare type Status = "pending" | "scheduled" | "cancelled";
+declare type Gender = 'male' | 'female' | 'other';
+declare type Status = 'pending' | 'scheduled' | 'cancelled';
 
 declare interface CreateUserParams {
   name: string;
