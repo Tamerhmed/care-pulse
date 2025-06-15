@@ -246,6 +246,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import CustomFormField, { FormFieldType } from '../CustomFormField';
 import SubmitButton from '../SubmitButton';
 import { Form } from '../ui/form';
+import { House } from 'lucide-react';
+import Link from 'next/link';
 
 declare type Status = 'pending' | 'scheduled' | 'cancelled';
 
@@ -362,10 +364,19 @@ export const AppointmentForm = ({
       <form onSubmit={form.handleSubmit(onSubmit)} className='flex-1 space-y-6'>
         {type === 'create' && (
           <section className='mb-12 space-y-4'>
-            <h1 className='header'>New Appointment</h1>
-            <p className='text-dark-700'>
-              Request a new appointment in 10 seconds.
-            </p>
+            <div className='flex-col md:flex justify-between gap-4'>
+              <div className='self-end'>
+                <Link href='/'>
+                  <House />
+                </Link>
+              </div>
+              <div>
+                <h1 className='header'>New Appointment</h1>
+                <p className='text-dark-700'>
+                  Request a new appointment in 10 seconds.
+                </p>
+              </div>
+            </div>
           </section>
         )}
 
